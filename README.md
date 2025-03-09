@@ -1,10 +1,8 @@
 # Challange 1 -  Administração de Sistemas GNU/Linux: Fundamentos e Prática
----
+
 
 > [!IMPORTANT]  
 > Tópico 2: Introdução ao shell e comandos básicos 
-
----
 
 ###### 1. Entendendo informativos do bash no GNU/Linux
 
@@ -17,7 +15,7 @@
 - ```#```: Indica que o usuário atual tem permissões adminstratativas, ou seja, o root está logado no shell. 
 
 
-> ```*Observação```*: '$' Indica que o usuário atual é um usuário comum (sem privilégios administrativos).
+> Observação: '$' Indica que o usuário atual é um usuário comum (sem privilégios administrativos).
 
 
 ---
