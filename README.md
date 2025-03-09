@@ -1,10 +1,8 @@
 # Challange 1 -  Administração de Sistemas GNU/Linux: Fundamentos e Prática
 ---
 
-| ℹ️ **Tópico 2** | Introdução ao shell e comandos básicos |
-|----------------|--------------------------------------|
-
-
+> [!IMPORTANT]  
+> Tópico 2: Introdução ao shell e comandos básicos 
 
 ---
 
