@@ -1,4 +1,4 @@
-# DEsafio 1 -  Administração de Sistemas GNU/Linux: Fundamentos e Prática
+# Desafio 1 -  Administração de Sistemas GNU/Linux: Fundamentos e Prática
 
 
 > [!IMPORTANT]  
