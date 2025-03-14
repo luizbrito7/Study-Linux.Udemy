@@ -52,6 +52,28 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 > O comando para navegar entre diretórios é o cd (change directory)
 
 
+###### 6. Colunas retorno do comando ```ls -l```
+
+>   -rw-rw-r-- 1 luiz luiz 2829 mar 14 18:32 README.md
+
+1. Se for - é um arquivo, se for d é um diretório 
+2. Permissões para o arquivo/diretório ["Usuário", "Grupo do usuário", "Outros usuários"]
+3. Usuário dono do arquivo/diretório 
+4. Grupo do usuário do arquido/diretório 
+5. Data e hora que o arquivo foi criado 
+6. Nome do arquivo/diretório 
+
+
+###### 7. Criando diretórios aninhados 
+
+- ``` mkdir -p /continente/pais/estado/cidade/bairro/rua ```
+- Flag ```-p``` "make parent directories as needed"
+
+> [!IMPORTANT]
+> Importante se lembrar do conceito de caminho relativo e absoluto
+
+###### 8. Utilizando mv para mover diretórios 
+
 
 
 
