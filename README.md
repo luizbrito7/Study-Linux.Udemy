@@ -4,7 +4,7 @@
 > [!IMPORTANT]  
 > Tópico 2: Introdução ao shell e comandos básicos 
 
-###### 1. Entendendo informativos do bash no GNU/Linux
+#### 1. Entendendo informativos do bash no GNU/Linux
 
 
 > [root@localhost var]#
@@ -20,7 +20,7 @@
 
 ---
 
-###### 2. Função dos diretórios do GNU/Linux 📁
+#### 2. Função dos diretórios do GNU/Linux 📁
 
 - ```/bin```: Diretório com os binários essensciais para o funcionamento do sistema, por exemplo, ```ls``` e ```cp```;
 - ```/boot```: Arquivos responsáveis pelo processo de inicialização do sistema operacional;
@@ -32,17 +32,17 @@
 > *"Sistema de arquivos do kernel. Este diretório **não existe em seu disco rígido**, ele é criado pelo kernel e usado por diversos programas que fazem sua leitura. Através de seu conteúdo podemos verificar configurações do sistema ou modificar o funcionamento de dispositivos através de alterações em seus arquivos (como a função`de roteamento)."* - ```Guilerme Rodrigues Pereira```. 
 
 
-###### 3. Significado do ~ no sistema operacional Linux 
+#### 3. Significado do ~ no sistema operacional Linux 
 
 O ~ representa o diretório do usuário logado no terminal atual, ou seja, se tiver com o user Luiz e navegar com ```cd ~``` vou ser direcionado para ```/home/luiz```
 
 
-###### 4. Arquivos e diretórios com ```.```  no Linux 
+#### 4. Arquivos e diretórios com ```.```  no Linux 
 
 Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visualizados com o parametro ```-a```
 
 
-###### 5. Entendendo a navegação entre diretórios  
+#### 5. Entendendo a navegação entre diretórios  
 
 - ```caminho absoluto```: Nesse caso é necessário especificar do repositório raiz até o arquivo que você deseja, por exemplo, ```/home/luiz/projetos/estudando-linux```
 
@@ -52,7 +52,7 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 > O comando para navegar entre diretórios é o cd (change directory)
 
 
-###### 6. Colunas retorno do comando ```ls -l```
+#### 6. Colunas retorno do comando ```ls -l```
 
 >   -rw-rw-r-- 1 luiz luiz 2829 mar 14 18:32 README.md
 
@@ -64,7 +64,7 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 6. Nome do arquivo/diretório 
 
 
-###### 7. Criando diretórios aninhados 
+#### 7. Criando diretórios aninhados 
 
 - ``` mkdir -p /continente/pais/estado/cidade/bairro/rua ```
 - Flag ```-p``` "make parent directories as needed"
@@ -72,7 +72,7 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 > [!IMPORTANT]
 > Importante se lembrar do conceito de caminho relativo e absoluto
 
-###### 8. Utilizando mv para mover diretórios 
+#### 8. Utilizando mv para mover diretórios 
 
 
 
