@@ -38,7 +38,7 @@ O ~ representa o diretório do usuário logado no terminal atual, ou seja, se ti
 ---
 ## 4. Arquivos e diretórios com ```.```  no Linux 
 
-Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visualizados com o parametro ```-a```
+Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visualizados, somente com o parametro ```-a```
 
 ---
 ## 5. Entendendo a navegação entre diretórios  
@@ -68,7 +68,7 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 - ``` mkdir -p /continente/pais/estado/cidade/bairro/rua ```
 - Flag ```-p``` "make parent directories as needed"
 
-> [!IMPORTANT]
+> [!WARNING]
 > Importante se lembrar do conceito de caminho relativo e absoluto
 
 ---
@@ -98,3 +98,61 @@ Diretórios os arquivos com ```.``` são ocultos, ou seja, não podem ser visual
 ## 9. Entendendo comandos para apagar diretórios arquivos
 
 - ```rm```: apaga exclusivamente **ARQUIVOS** no linux 
+- ```rm -r ```: apaga arquivos e diretórios de forma recursiva 
+- ```rm -i```: apaga os arquivos, porém com interação de confirmação no terminal, para confirmar digite ```y``` e para cancelar ```n```
+- ``` rm -f```: contrário ao -i o -f força a exclusão de uma forma que não tenha interação com o usuário
+
+> [Documentação interessante sobre o tópico](https://labex.io/questions/what-is-the-difference-between-rm-f-and-rm-i-209741)
+---
+## 10. Entendendo o comando ```RMDIR``` 
+
+1. O rmdir server inicialmente para apagar diretórios vazios, porém é necessário entender alguns pontos importantes do seu funcionamento e flagas 
+1.1 ```-p```essa flag consegue fazer com que na estrutura aninhada seja apagado todos os diretórios sequencialmente, por exemplo, no cenário abaixo eu quero apagar todos os diretórios *que estão vazios* com um único comando eu posso utilizar o ```rmdir -p <path>```
+1.2 rmdir -p teste/a/b/c/d/e vai apagar todos os diretórios até chegar no testes, mas se no nível do a tiver outro arquivo ou diretório todos ou demais vão ser apagados menos o ```a``` e o ```teste``` (o diretório superior tem dependencias nos filhos). 
+
+
+```
+teste
+└── a
+    └── b
+        └── c
+            └── d
+                └── e
+```
+
+---
+## 11. Entendendo os comandos ```find``` ````mv```` e ```cp```
+
+- ```find```: Utilizado parta buscar repositórios e arquivos no linux, sua sintaxe base é essa ````find <flag> <argunmento> <flag> <argumento>````
+- ````mv````: Utilizado para mover diretotórios e arquivos ou renomear sintaxe base ````mv [origem] [destino]````
+- ````cp````: Utilizado para COPIAR arquivos entre diretórios````cp [origem] [destino]````
+
+
+#### Para mover ou copiar vários arquivos de uma vez:
+
+``` bash 
+[cp | mv] arquivo1 arquivo2 arquivo3 /caminho/do/destino/
+```
+
+## 12. Links simbólico e link hard 
+
+1. ```Link Simbólico``` é uma forma de navegar até arquivos ou diretórios de uma forma mais ágil, porém se você alterar o path do arquivo o link simbólico vai quebrar, pois não vai ser possivel acessar o arquivo. 
+
+```
+ln -s <path-do-arquivo> <nome-do-link-simbolico> 
+```
+
+2. Hard Link
+2.1. ````Inode````:Para entender esse cara é necessário entender o que é um INODE e esse é um identificador do linux que referencia algumas informações sobre um diretório ou arquivo. Para visualizar o inode de um diretório podemos executar o ````ls -i````. 
+2.2. Com isso diferente do soft link o hard utilza o mesmo inode para realizar o link que faz a comunicação com o arquivo, sendo assim se vc alterar o caminho original do arquivo o link vai ser alterado automaticamente, diferente do primeiro que se tornaria um **dead link**
+
+> [!CAUTION]
+> Importante HARD LINKS só funcionam em diretórios por questões de segurança
+
+
+## 13. + Comandos importates para o dia a dia
+
+- ```pwd```: Utilizado para visualizar o caminho até o repositório atual  
+- ```tree```: comando para visualização de diretórios aninhados em formato de arvore 
+- ```cd ~```: Navega até o diretório do usuário atual 
+- ```cd -```: Navega para o último diretório acessado antes do atual  
